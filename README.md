@@ -1,0 +1,1 @@
+# HomeQ_NextJS_ecommerceTemplate
