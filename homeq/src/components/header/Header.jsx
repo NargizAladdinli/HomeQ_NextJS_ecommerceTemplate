@@ -1,14 +1,19 @@
-import style from "./_header.module.scss"
-// import "@/styles/scss/style.css"
+import style from './_header.module.scss'
 
 const Header = () => {
     return(
 
-        <h1 className={style.title}>
-            Salam
-    
-    <span className={style.select}>Sagol</span>
-        </h1>
+        <>
+        
+        <h1 className={style.title}>salam</h1>
+        <ul className={style.list}>
+            <li>Salamlar olusun</li>
+            <li>Salamlar olusun</li>
+            <li>Salamlar olusun</li>
+            <li>Salamlar olusun</li>
+            <li>Salamlar olusun</li>
+        </ul>
+        </>
     )
 }
 export default Header;

@@ -1,11 +1,10 @@
+@import "@/styles/scss/partials/varaible";
+@import "@/styles/scss/partials/mixin";
+
 .title{
-    // color: $redclr;
-    font-size: 45px;
-     @include Flex($f_direction:column);
-display: flex;
-flex-direction: column;
-    .select{
-        font-size: 67px;
-        color: green;
-    }
+    color: $primary;
+    background-color: $dark;
+}
+.list{
+    @include Flex();
 }
