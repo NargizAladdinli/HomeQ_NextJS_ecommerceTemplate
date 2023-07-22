@@ -1,0 +1,20 @@
+@import "@/styles/scss/partials/varaible";
+@import "@/styles/scss/partials/mixin";
+
+.notpage {
+    .notpage404 {
+        @include Flex($j_content: center, $a_items: center);
+        max-width: 560px;
+        width: 100%;
+        margin: auto;
+        @media (max-width:768px) {
+            flex-direction: column;
+            text-align: center;
+        }
+        .imgpage{
+            background-image: url('https://colorlib.com/etc/404/colorlib-error-404-18/img/emoji.png');
+            background-size: cover;
+            @include Img($wid:50%,$heit:140px);
+        }
+    }
+}
