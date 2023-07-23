@@ -1,20 +1,41 @@
-@import "@/styles/scss/partials/varaible";
-@import "@/styles/scss/partials/mixin";
+@use "../../styles/scss/partials/varaible" as var;
+@use "../../styles/scss/partials/mixin" as mixin;
 
 .notpage {
+    padding: 70px 0;
     .notpage404 {
-        @include Flex($j_content: center, $a_items: center);
-        max-width: 560px;
-        width: 100%;
+        @include mixin.Flex($j_content: center, $a_items: center);
+        width: 560px;
         margin: auto;
-        @media (max-width:768px) {
-            flex-direction: column;
-            text-align: center;
-        }
+       @include mixin.breakpoint("medium"){
+        flex-direction: column;
+        text-align: center;
+        width: 280px;
+       }
         .imgpage{
             background-image: url('https://colorlib.com/etc/404/colorlib-error-404-18/img/emoji.png');
             background-size: cover;
-            @include Img($wid:50%,$heit:140px);
+            @include mixin.Img($wid:50%,$heit:140px);
+            position: relative;
+            &::before{
+                content: "";
+                @include mixin.Text($radius:var.$radius_50,$ground:var.$before404clr);
+                @include mixin.Img($pos:absolute,$wid:300px,$heit:300px,$top:-60%,$left:-60%,$z_index:-1);
+            }
+        }
+        .title{
+            margin-left: 20px;
+            color: var.$blackclr;
+            font-family: 'Nunito Sans', sans-serif;
+            .firsttitle{
+                @include mixin.Text($f_size:var.$size404,$f_weight:var.$weight_7);
+                margin-bottom: 10px;
+            }
+            .secondtitle{ @include mixin.Text($f_size:var.$size21,$f_weight:var.$weight_4); }
+            .paragraph{ @include mixin.Text($colrs:var.$phclr,$f_size:var.$size16,$f_weight:var.$weight_4); }
+            .link404{
+                @include mixin.Text($t_decoration:none);
+            }
         }
     }
 }

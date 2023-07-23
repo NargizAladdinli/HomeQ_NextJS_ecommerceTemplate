@@ -43,3 +43,18 @@
     background-repeat: $ground_repet;
     background-attachment: $ground_attachment;
 }
+$breakpoints:(
+    small: 480px,
+    medium: 768px,
+    large: 960px,
+    wide: 1200px
+);
+@mixin breakpoint($name) {
+    @if map-has-key($breakpoints, $name ){
+        @media (max-width: map-get($breakpoints, $name)) {
+            @content;
+        }
+    } @else {
+        @warn "Warning : `#{$name}` is not a valid breakpoint name.";
+    }
+}
