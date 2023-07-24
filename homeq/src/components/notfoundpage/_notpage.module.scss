@@ -1,5 +1,6 @@
 @use "../../styles/scss/partials/varaible" as var;
 @use "../../styles/scss/partials/mixin" as mixin;
+@import "../../styles/scss/partials/extend";
 
 .notpage {
     padding: 70px 0;
@@ -26,34 +27,17 @@
         .title{
             margin-left: 20px;
             color: var.$blackclr;
-            font-family: 'Nunito Sans', sans-serif;
             .firsttitle{
+                font-family: 'Nunito Sans', sans-serif;
                 @include mixin.Text($f_size:var.$size404,$f_weight:var.$weight_7);
                 margin-bottom: 10px;
             }
-            .secondtitle{ @include mixin.Text($f_size:var.$size21,$f_weight:var.$weight_4); }
-            .paragraph{ @include mixin.Text($colrs:var.$phclr,$f_size:var.$size16,$f_weight:var.$weight_4); }
-            .link404{
-                @include mixin.Text($t_decoration:none,$colrs:var.$whiteclr,$ground:var.$bodyclr,$radius:var.$radius_6,$border:2px solid var.$bodyclr,$f_size:var.$size15);
-                padding: 10px 20px;
-                @include mixin.Img($pos:relative,$flow:hidden,$z_index:1);
-                transition: all 0.3s ease-in-out 0s;
-                display: inline-block;
-                &::after{
-                    @include mixin.Img($pos:absolute,$z_index:-1,$left:-20%,$right:-20%,$top:-4%,$botom:0,$heit:150%,$wid:150%);
-                    content: "";
-                    transform: skewX(45deg) scale(0, 1);
-                    transition: all 0.3s ease-in-out 0s;
-                }
-                &:hover{
-                    color: var.$bodyclr;
-                    box-shadow: 0px 30px 40px 0px rgba(1, 24, 55, 0.16);
-                    &::after{
-                        transform: skewX(45deg) scale(1,1);
-                        background-color: #ffffff;
-                    }
-                }
+            .secondtitle{ 
+                @include mixin.Text($f_size:var.$size21,$f_weight:var.$weight_4);
+                font-family: 'Nunito Sans', sans-serif;
             }
+            .paragraph{ @include mixin.Text($colrs:var.$phclr,$f_size:var.$size16,$f_weight:var.$weight_4); }
+            .link404{ @extend %_backhome; }
         }
     }
 }

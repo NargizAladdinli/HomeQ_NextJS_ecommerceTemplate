@@ -1,3 +1,24 @@
-%_backhome{
-    
+@use "../partials/mixin" as mixin;
+@use "../partials/varaible" as var;
+
+%_backhome {
+    @include mixin.Text($t_decoration: none, $colrs: var.$whiteclr, $ground: var.$bodyclr, $radius: var.$radius_6, $border: 2px solid var.$bodyclr, $f_size: var.$size15);
+    padding: 10px 20px;
+    @include mixin.Img($pos: relative, $flow: hidden, $z_index: 1);
+    transition: all 0.3s ease-in-out 0s;
+    display: inline-block;
+    &::after {
+        @include mixin.Img($pos: absolute, $z_index: -1, $left: -20%, $right: -20%, $top: -4%, $botom: 0, $heit: 150%, $wid: 150%);
+        content: "";
+        transform: skewX(45deg) scale(0, 1);
+        transition: all 0.3s ease-in-out 0s;
+    }
+    &:hover {
+        color: var.$bodyclr;
+        box-shadow: 0px 30px 40px 0px rgba(1, 24, 55, 0.16);
+        &::after {
+            transform: skewX(45deg) scale(1, 1);
+            background-color: #ffffff;
+        }
+    }
 }
