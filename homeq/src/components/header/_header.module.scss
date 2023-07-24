@@ -1,3 +1,58 @@
-@import "@/styles/scss/partials/varaible";
-@import "@/styles/scss/partials/mixin";
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
 
+.header{
+    padding: 20px 0;
+    box-shadow: 0px 4px 22px 0px var.$shadowclr;
+    .headerflex{
+        @include mixin.Flex($j_content:space-between,$a_items:center);
+        .logolink{
+            @include mixin.Text($colrs:var.$colorlink,$f_weight:var.$weight_4,$f_size:var.$size24,$l_heit:var.$line33);
+            font-family: 'Cardo', serif;
+            span{
+                @include mixin.Text($l_heit:var.$line44,$colrs:var.$logoorange);
+                font-family: 'Noto Sans Khmer', sans-serif;
+            }
+        }
+        }
+        .listnav{
+            @include mixin.Flex($a_items:center,$gap:50px);
+            li{
+                a{
+                    @include mixin.Text($l_heit:var.$line18,$colrs:var.$colorlink,$f_size:var.$size14,$f_weight:var.$weight_4);
+                    transition: all 0.3s ease-in-out 0s;
+                    position: relative;
+                    &::before{
+                        width: 0%;
+                        height: 3px;
+                        position: absolute;
+                        content: "";
+                        top: 115%;
+                        transform: rotate(3deg);
+                        background-color: #DE8556;
+                        transition: all 0.3s ease-in-out 0s;
+                    }
+                    &:hover{
+                        &::before{ width: 100%; }
+                    }
+                }
+            }
+            .linav{
+                position: relative;
+                .dropdown{
+                    @include mixin.Img($pos:absolute,$wid:250px);
+                    height: auto;
+                    background: var.$whiteclr;
+                    box-shadow: 0px 0px 20px 0px #0706220F;
+                    li{
+                        .listdrop{
+                            padding: 0px 20px;
+                        }
+                    }
+                }
+            }
+        }
+        .shoping{
+            @include mixin.Flex($a_items:center,$gap:50px);
+        }
+    }
