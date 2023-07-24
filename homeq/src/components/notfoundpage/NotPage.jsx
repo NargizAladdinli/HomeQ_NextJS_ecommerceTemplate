@@ -14,7 +14,7 @@ const NotFoundPage = () => {
               Sorry but the page you are looking for does not exist, have been
               removed. name changed or is temporarily unavailable
             </p>
-        <Link href="/">Back To Home</Link>
+        <Link href="/" className={style.link404}>Back To Home</Link>
           </div>
         </div>
       </div>
