@@ -13,7 +13,7 @@ const Header = () => {
                 Home<span>Q</span>
               </Link>
             </div>
-            <nav>
+            <nav className={style.navbar}>
               <ul className={style.listnav}>
                 <li>
                   <Link href="/">Home</Link>
@@ -31,26 +31,6 @@ const Header = () => {
                   <Link href="#">
                     Pages <FaAngleDown />
                   </Link>
-                  <ul className={style.dropdown}>
-                    <li>
-                        <Link className={style.listdrop} href="#">Portofolio</Link>
-                    </li>
-                    <li>
-                        <Link className={style.listdrop} href="#">Our Agent</Link>
-                    </li>
-                    <li>
-                        <Link className={style.listdrop} href="#">Our Service</Link>
-                    </li>
-                    <li>
-                        <Link className={style.listdrop} href="#">Wishlist</Link>
-                    </li>
-                    <li>
-                        <Link className={style.listdrop} href="#">Location</Link>
-                    </li>
-                    <li>
-                        <Link className={style.listdrop} href="#">FAQ</Link>
-                    </li>
-                  </ul>
                 </li>
                 <li>
                   <Link href="#">Contact</Link>
@@ -59,14 +39,15 @@ const Header = () => {
             </nav>
             <div className={style.shoping}>
               <div>
-                <Link href="#">
+                <Link className={style.shopcart} href="#">
                   <FaShoppingCart />
+                <span>0</span>
                 </Link>
               </div>
-              <div>
+              <div className={style.signin}>
                 <Link href="#">Sign in</Link>
               </div>
-              <div>
+              <div className={style.register}>
                 <Link href="#">Register</Link>
               </div>
             </div>
