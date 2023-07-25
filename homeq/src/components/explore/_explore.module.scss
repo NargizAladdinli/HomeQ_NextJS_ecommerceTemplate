@@ -1,0 +1,7 @@
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
+
+.ground{
+    @include mixin.Text($ground:var.$bodyclr);
+    
+}

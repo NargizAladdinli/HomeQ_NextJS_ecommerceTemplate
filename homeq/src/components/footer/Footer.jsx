@@ -1,8 +1,16 @@
-
+import Explore from "../explore/Explore";
+import style from "./_footer.module.scss";
 
 const Footer = () => {
     return(
-        <h1>Bu menim Footer hisemdir</h1>
+        <>
+        <Explore/>
+        <footer>
+            <div style={{maxWidth:"1140px"}} className="container">
+                
+            </div>
+        </footer>
+        </>
     )
 }
 export default Footer;
