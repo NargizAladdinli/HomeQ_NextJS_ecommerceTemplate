@@ -3,7 +3,7 @@
 
 %_backhome {
     @include mixin.Text($t_decoration: none, $colrs: var.$whiteclr, $ground: var.$bodyclr, $radius: var.$radius_6, $border: 2px solid var.$bodyclr, $f_size: var.$size15);
-    padding: 10px 20px;
+    padding: 12px 18px;
     @include mixin.Img($pos: relative, $flow: hidden, $z_index: 1);
     transition: all 0.3s ease-in-out 0s;
     display: inline-block;

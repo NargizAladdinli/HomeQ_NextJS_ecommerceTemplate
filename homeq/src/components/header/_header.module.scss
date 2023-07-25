@@ -1,5 +1,6 @@
 @use "../../styles/scss/partials/mixin" as mixin;
 @use "../../styles/scss/partials/varaible" as var;
+@import "../../styles/scss/partials/extend";
 
 .header{
     padding: 20px 0;
@@ -13,7 +14,6 @@
                 @include mixin.Text($l_heit:var.$line44,$colrs:var.$logoorange);
                 font-family: 'Noto Sans Khmer', sans-serif;
             }
-        }
         }
         .navbar{
             @include mixin.breakpoint('medium') { display: none; }
@@ -43,26 +43,34 @@
             }
         }
         .shoping{
-            @include mixin.Flex($a_items:center,$gap:50px);
+            @include mixin.Flex($a_items:center,$gap:25px);
             .shopcart{
-                @include mixin.Img($wid:50px,$heit:50px,$pos:relative);
-                @include mixin.Text($ground:var.$whiteclr,$radius:var.$radius_50,$t_align:center,$f_size:var.$size18,$l_heit:var.$line46,$colrs:var.$bodyclr);
+                @include mixin.Img($wid:40px,$heit:40px,$pos:relative);
+                @include mixin.Text($ground:var.$whiteclr,$radius:var.$radius_50,$t_align:center,$f_size:var.$size18,$l_heit:var.$line36,$colrs:var.$bodyclr);
                 box-shadow: -1px 1px 15px 0px rgba(9, 20, 49, 0.1098039216);
                 display: inline-block;
                 span{
                     @include mixin.Text($colrs:var.$logoorange,$f_weight:var.$weight_7,$f_size:var.$size12);
-                    @include mixin.Img($pos:absolute,$top:-8px,$right:8px);
+                    @include mixin.Img($pos:absolute,$top:-9px,$right:4px);
                 }
             }
             .signin{
-                @include mixin.breakpoint("medium"){
-                    display: none;
+                @include mixin.breakpoint("medium"){ display: none; }
+                .signlink{
+                    @include mixin.Text($colrs:var.$bodyclr,$f_weight:var.$weight_4,$l_heit:var.$line18,$f_size:var.$size14);
                 }
             }
             .register{
-                @include mixin.breakpoint("medium"){
-                    display: none;
+                @include mixin.breakpoint("medium"){ display: none; }
+                .registerlink{
+                    @include mixin.Text($radius:0,$ground:var.$logoorange,$border:2px solid var.$logoorange);
+                    @extend %_backhome;
+                    &:hover{
+                        box-shadow: none;
+                        color: var.$logoorange;
+                    }
                 }
             }
         }
     }
+}
