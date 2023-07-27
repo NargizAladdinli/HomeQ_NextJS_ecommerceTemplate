@@ -1,0 +1,29 @@
+@use "../../styles/scss/partials/varaible" as var;
+@use "../../styles/scss/partials/mixin" as mixin;
+@import "../../styles/scss/partials/extend";
+
+.sign {
+    .title {
+        text-align: center;
+        padding: 30px 0;
+        h2 { @include mixin.Text($l_heit: var.$line54, $f_size: var.$size48); }
+        p {
+            width: 320px;
+            margin: auto;
+            padding-top: 16px;
+            @include mixin.Text($f_size: var.$size14, $f_weight: var.$weight_4, $l_heit: var.$line24, $colrs: var.$paragraph);
+        }
+    }
+    .form{
+        .inputdiv{
+            @include mixin.Flex($f_direction:column,$a_items:center);
+            input{
+                @include mixin.Img($wid:396px,$heit:50px);
+                @include mixin.Text($f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line18,$border:1px solid #00000014);
+                padding: 0 10px;
+                margin-top: 25px;
+                &::placeholder{ color: #818181; }
+            }
+        }
+    }
+}

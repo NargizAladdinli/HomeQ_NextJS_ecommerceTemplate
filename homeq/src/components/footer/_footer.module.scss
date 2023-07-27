@@ -34,4 +34,53 @@
             }
         }
     }
+    .titlehead{
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        @include mixin.Text($f_weight:var.$weight_6,$f_size:var.$size12,$l_heit:var.$line16);
+    }
+    .listhead{
+        padding-left: 0;
+        margin-bottom: 0;
+        margin-top: 24px;
+        li{
+            margin-bottom: 22px;
+            a{
+                @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size12,$l_heit:var.$line16,$colrs:var.$paragraph); 
+            }
+        }
+    }
+    form{
+        .input{
+            width: 256px;
+            padding: 7px 10px;
+            @include mixin.Text($f_size:var.$size12,$f_weight:var.$weight_4,$l_heit:var.$line24,$border:1px solid #00000014); 
+            &::placeholder{
+                color: var.$paragraph;
+            }
+        }
+        .button{
+            margin-left: 12px;
+            vertical-align: bottom;
+            @include mixin.Img($wid:40px,$heit:40px);
+            @include mixin.Text($ground:var.$bodyclr,$radius:2px,$colrs:var.$whiteclr,$f_size:var.$size19);
+        }
+    }
+    .sosial{
+        margin-top: 25px;
+        .links{
+            margin-top: 20px;
+            gap: 10px;
+            display: flex;
+            .sosiallink{
+                @include mixin.Text($ground:var.$logoorange,$colrs:var.$whiteclr,$f_size:var.$size15,$radius:var.$radius_50,$t_align:center);
+                @include mixin.Img($wid:25px,$heit:25px);
+            }
+        }
+    }
+    .allrights{
+        border-top: 1px solid #0000000F;
+        border-radius: 1px;
+        padding: 20px 0;
+        .rights{ @include mixin.Text($f_size:var.$size12,$f_weight:var.$weight_4,$l_heit:var.$line16,$colrs:var.$paragraph,$t_align:center); }
+    }
 }

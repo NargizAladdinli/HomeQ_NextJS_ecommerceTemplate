@@ -5,7 +5,7 @@ const Explore = () => {
   return (
     <>
     <section className={style.explore}>
-      <div style={{ maxWidth: "1140px" }} className="container">
+      <div className="container">
         <div className={style.ground}>
           <div className="row align-items-center">
             <div className="col-lg-3">

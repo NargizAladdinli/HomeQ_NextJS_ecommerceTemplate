@@ -34,3 +34,24 @@ ul {
 a {
     text-decoration: none !important;
 }
+.container{
+    max-width: 1140px !important;
+}
+.head_body{
+    background-color: #F6F6F6;
+    padding: 70px 0;
+    .titlehead{
+        font-size: 48px;
+        line-height: 54px;
+        margin-bottom: 25px;
+    }
+    .linkhome{
+        color: #818181;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20.16px;
+        span{
+            color: #38343D;
+        }
+    }
+}

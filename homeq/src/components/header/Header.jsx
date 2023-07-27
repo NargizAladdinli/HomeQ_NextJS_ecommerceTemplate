@@ -6,10 +6,10 @@ const Header = () => {
   return (
     <>
       <header className={style.header}>
-        <div style={{maxWidth:"1140px"}} className="container">
+        <div className="container">
           <div className={style.headerflex}>
             <div>
-              <Link className={style.logolink} href="#">
+              <Link className={style.logolink} href="/">
                 Home<span>Q</span>
               </Link>
             </div>
@@ -45,7 +45,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className={style.signin}>
-                <Link className={style.signlink} href="#">Sign in</Link>
+                <Link className={style.signlink} href="/signin">Sign in</Link>
               </div>
               <div className={style.register}>
                 <Link className={style.registerlink} href="#">Register</Link>
