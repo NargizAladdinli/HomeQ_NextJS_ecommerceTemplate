@@ -8,10 +8,13 @@
         @include mixin.Text($ground: var.$bodyclr);
         padding: 64px 0px;
         color: var.$whiteclr;
+        @include mixin.breakpoint('medium'){ text-align: center; }
         .title{
+            position: relative;
             .h3title{ 
                 @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size38,$l_heit:var.$line52);
              }
+             svg{ @include mixin.Img($pos:absolute,$right:110px); }
             .ptitle{
                 margin-top: 25px;
                 @include mixin.Text($f_weight:var.$weight_5,$f_size:var.$size14,$l_heit:var.$line24);

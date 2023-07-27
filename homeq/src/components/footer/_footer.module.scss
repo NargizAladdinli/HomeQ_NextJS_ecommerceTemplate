@@ -1,0 +1,37 @@
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
+@import "../../styles/scss/partials/extend";
+
+.footer{
+    .logolink{
+        @include mixin.Text($colrs:var.$colorlink,$f_weight:var.$weight_4,$f_size:var.$size24,$l_heit:var.$line33);
+        font-family: 'Cardo', serif;
+        span{
+            @include mixin.Text($l_heit:var.$line44,$colrs:var.$logoorange);
+            font-family: 'Noto Sans Khmer', sans-serif;
+        }
+    }
+    .pfooter{
+        @include mixin.Text($f_size:var.$size12,$f_weight:var.$weight_4,$l_heit:var.$line24,$colrs:var.$paragraph);
+        width: 229px;
+    }
+    .adress{
+        .list{
+            padding-left: 0;
+            margin-bottom: 0;
+            li{
+                margin-bottom: 15px;
+                @include mixin.Flex($a_items:center,$gap:12px);
+                .icon{ @include mixin.Text($colrs:var.$bodyclr,$f_size:var.$size20); }
+                .title{
+                    @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size12,$l_heit:var.$line16);
+                    p{
+                        margin-bottom: 6px;
+                        color: var.$bodyclr;
+                    }
+                    span{ color: var.$paragraph; }
+                }
+            }
+        }
+    }
+}
