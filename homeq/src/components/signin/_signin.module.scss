@@ -31,6 +31,18 @@
                 margin-top: 15px;
                 @include mixin.Text($t_align:end,$f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line18);
             }
+            .checkbox{
+                width: 396px;
+                margin-top: 20px;
+                .checkinput{
+                    margin-top: 0;
+                    width: 20px;
+                    height: 20px;
+                }
+                .checkspan{
+                    @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size12,$colrs:var.$paragraph,$l_heit:var.$line24);
+                }
+            }
             button{
                 @extend %_register;
                 @include mixin.breakpoint("small") { width: 330px; }

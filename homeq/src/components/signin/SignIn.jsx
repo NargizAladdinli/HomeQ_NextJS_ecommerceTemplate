@@ -20,7 +20,7 @@ const SignIn = () => {
                     <button type="submit">Login</button>
                     <div className={style.create}>
                         <span>Dont have an account? </span>
-                        <Link href="#"> Create Account</Link>
+                        <Link href="/register"> Create Account</Link>
                     </div>
                     </div>
                 </form>

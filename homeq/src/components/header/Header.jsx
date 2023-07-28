@@ -31,6 +31,26 @@ const Header = () => {
                   <Link href="#">
                     Pages <FaAngleDown />
                   </Link>
+                  <ul className={style.dropdown}>
+                    <li>
+                      <Link href="#">Portofolio</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Our Agent</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Our Service</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Wishlist</Link>
+                    </li>
+                    <li>
+                      <Link href="#">Location</Link>
+                    </li>
+                    <li>
+                      <Link href="#">FAQ</Link>
+                    </li>
+                  </ul>
                 </li>
                 <li>
                   <Link href="#">Contact</Link>

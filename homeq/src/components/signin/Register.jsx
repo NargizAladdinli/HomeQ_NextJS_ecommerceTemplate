@@ -18,13 +18,14 @@ const Register = () => {
                     <input type="email" name="email" placeholder="Email*" />
                     <input type="password" name="password" placeholder="Password"/>
                     <input type="password" name="configmPassword" placeholder="Confirm Password" />
-                    <div>
-                        <input type="" checked />
+                    <div className={style.checkbox}>
+                        <input className={style.checkinput} type="checkbox" />
+                        <p className={style.checkspan}>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. </p>
                     </div>
                     <button type="submit">Create Account</button>
                     <div className={style.create}>
                         <span>Already have an account? </span>
-                        <Link href="#"> Login</Link>
+                        <Link href="/signin"> Login</Link>
                     </div>
                     </div>
                 </form>
