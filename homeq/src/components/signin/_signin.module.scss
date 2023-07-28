@@ -19,10 +19,27 @@
             @include mixin.Flex($f_direction:column,$a_items:center);
             input{
                 @include mixin.Img($wid:396px,$heit:50px);
-                @include mixin.Text($f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line18,$border:1px solid #00000014);
+                @include mixin.Text($f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line18,$border:1px solid #00000014,$radius:4px);
                 padding: 0 10px;
                 margin-top: 25px;
                 &::placeholder{ color: #818181; }
+                @include mixin.breakpoint('small') { width: 330px; }
+            }
+            span{
+                @include mixin.breakpoint('small') { width: 330px; }
+                width: 396px;
+                margin-top: 15px;
+                @include mixin.Text($t_align:end,$f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line18);
+            }
+            button{
+                @extend %_register;
+                @include mixin.breakpoint("small") { width: 330px; }
+            }
+            .create{
+                margin-top: 20px;
+                @include mixin.Text($f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line18);
+                span{ color: var.$paragraph; }
+                a{color: var.$bodyclr; }
             }
         }
     }
