@@ -59,10 +59,11 @@
             }
         }
         .button{
-            margin-left: 12px;
-            vertical-align: bottom;
-            @include mixin.Img($wid:40px,$heit:40px);
-            @include mixin.Text($ground:var.$bodyclr,$radius:2px,$colrs:var.$whiteclr,$f_size:var.$size19);
+            // margin-left: 12px;
+            // vertical-align: bottom;
+            // @include mixin.Img($wid:40px,$heit:40px);
+            // @include mixin.Text($ground:var.$bodyclr,$radius:2px,$colrs:var.$whiteclr,$f_size:var.$size19);
+            @extend %_emailbutton;
         }
     }
     .sosial{

@@ -48,7 +48,7 @@
                         }
                     }
                     .dropdown{
-                        @include mixin.Img($wid:250px,$pos:absolute,$top:170%,$left:0);
+                        @include mixin.Img($wid:200px,$pos:absolute,$top:170%,$left:0);
                         padding: 0;
                         @include mixin.Text($ground:var.$whiteclr,$radius:2px);
                         border-top: 4px solid var.$logoorange;
