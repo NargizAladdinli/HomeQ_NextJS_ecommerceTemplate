@@ -71,10 +71,10 @@ const Footer = () => {
             <h3 className={style.titlehead}>Service</h3>
                 <ul className={style.listhead}>
                     <li>
-                        <Link href="/">Login</Link>
+                        <Link href="/signin">Login</Link>
                     </li>
                     <li>
-                        <Link href="#">Register</Link>
+                        <Link href="/register">Register</Link>
                     </li>
                     <li>
                         <Link href="#">Location</Link>
