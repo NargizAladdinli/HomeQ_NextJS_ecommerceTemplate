@@ -34,14 +34,13 @@
             .checkbox{
                 width: 396px;
                 margin-top: 20px;
+                @include mixin.breakpoint('small') { width: 330px; }
                 .checkinput{
                     margin-top: 0;
                     width: 20px;
                     height: 20px;
                 }
-                .checkspan{
-                    @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size12,$colrs:var.$paragraph,$l_heit:var.$line24);
-                }
+                .checkspan{ @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size12,$colrs:var.$paragraph,$l_heit:var.$line24); }
             }
             button{
                 @extend %_register;

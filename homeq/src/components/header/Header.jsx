@@ -45,7 +45,7 @@ const Header = () => {
                       <Link href="#">Wishlist</Link>
                     </li>
                     <li>
-                      <Link href="#">Location</Link>
+                      <Link href="/location">Location</Link>
                     </li>
                     <li>
                       <Link href="#">FAQ</Link>
