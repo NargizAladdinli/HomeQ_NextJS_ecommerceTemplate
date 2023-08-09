@@ -1,0 +1,33 @@
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
+
+.videos{
+    padding: 20px 0;
+    .video{
+        .title{
+            text-align: center;
+            max-width: 815px;
+            margin: auto;
+            h2{ @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size48,$l_heit:var.$line54); }
+            p{  @include mixin.Text($f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line24); }
+        }
+        .content{
+            .img{
+                @include mixin.Img($wid:100%,$pos:relative);
+                .furniture{ @include mixin.Img($wid:100%,$heit:100%,$o_fit:cover); }
+                .playing{
+                    @include mixin.Img($wid:80px,$heit:80px,$pos:absolute,$top:47%,$left:47%);
+                    @include mixin.Flex($a_items:center,$j_content:center);
+                    @include mixin.Text($ground:var.$whitetranspar,$radius:var.$radius_50);
+                    .play{
+                        @include mixin.Text($colrs:var.$whiteclr,$ground:var.$logoorange,$radius:var.$radius_50,$f_size:33px);
+                        @include mixin.Img($wid:64px,$heit:64px);
+                        @include mixin.Flex($a_items:center,$j_content:center);
+                        border-radius: 50px;
+                        box-shadow: 0px 4px 88px 0px #00000026;
+                    }
+                }
+            }
+        }
+    }
+}

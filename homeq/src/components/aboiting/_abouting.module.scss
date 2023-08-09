@@ -1,0 +1,25 @@
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
+
+.abouting{
+    padding-top: 50px;
+    .img{
+        width: 100%;
+        .imgbulding{ @include mixin.Img($wid:100%,$heit:100%,$o_fit:cover); }
+    }
+    .text{
+        width: 550px;
+        margin: auto;
+        @include mixin.breakpoint("medium"){
+            width: 100%;
+            margin-top: 20px;
+        }
+        .title{
+            margin-bottom: 25px;
+            h2{ @include mixin.Text($f_size:var.$size38,$f_weight:var.$weight_4,$l_heit:var.$line52);  }
+        }
+        .content{
+            p{ @include mixin.Text($f_size:var.$size14,$f_weight:var.$weight_4,$l_heit:var.$line24,$colrs:var.$paragraph); }
+        }
+    }
+}

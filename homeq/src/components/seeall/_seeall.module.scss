@@ -1,0 +1,13 @@
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
+
+.seeall{
+    padding-top: 70px;
+    .flex{
+        @include mixin.Flex($a_items:center,$j_content:space-between);
+        h4{ @include mixin.Text($f_weight:var.$weight_4,$f_size:var.$size38,$l_heit:var.$line52); }
+        .seelink{
+            @include mixin.Text($t_decoration:none,$f_size:var.$size14,$colrs:var.$bodyclr);
+        }
+    }
+}
