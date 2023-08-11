@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Faq from "./Faq";
 
 const Faqs = () => {
     const [questions, setQuestions] = useState([]);
@@ -17,9 +18,9 @@ const Faqs = () => {
         <section className="">
             <div className="container">
                 <div className="accordion">
-                    {questions.map((item,i) => {
+                    {questions.slice(0,1).map((item,i) => {
                         return(
-                            salam
+                            <Faq item={item}/>
                         )
                     })}
                 </div>
