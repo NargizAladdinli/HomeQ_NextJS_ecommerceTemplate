@@ -1,3 +1,31 @@
 @use "../../styles/scss/partials/mixin" as mixin;
 @use "../../styles/scss/partials/varaible" as var; 
 
+.faq{
+    padding: 50px 0;
+    .acordion{
+        .down{
+            padding: 20px 0;
+            border-bottom: 1px solid#0000001A;
+            .click{
+                cursor: pointer;
+                @include mixin.Flex($j_content:space-between,$a_items:center);
+                .black{
+                    @include mixin.Text($f_size:var.$size24,$f_weight:var.$weight_4);
+                }
+                .orange{
+                    @include mixin.Text($f_size:var.$size24,$f_weight:var.$weight_4,$colrs:var.$logoorange);
+                }
+                span{
+                    @include mixin.Text($f_size:var.$size24);
+                }
+            }
+            .open{
+                display: block !important;
+            }
+            .close{
+                display: none;
+            }
+        }
+    }
+}

@@ -15,7 +15,7 @@ export default function Sign() {
         <section className='head_body'>
             <div className='container'>
                 <div className='content'>
-                    <h1 className='titlehead'>Sign In</h1>
+                    <h2 className='titlehead'>Sign In</h2>
                     <Link className='linkhome' href="/">Home / <span>Sign in</span></Link> 
                 </div>
             </div>

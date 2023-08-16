@@ -6,6 +6,10 @@
     outline: none;
     box-sizing: border-box !important;
     border: none;
+    &::selection{
+        background-color: #123E56;
+        color: #fff;
+    }
 }
 
 .body {

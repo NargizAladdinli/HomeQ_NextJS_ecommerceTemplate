@@ -15,7 +15,7 @@ export default function Registers() {
         <section className='head_body'>
             <div className='container'>
                 <div className='content'>
-                    <h1 className='titlehead'>Register</h1>
+                    <h2 className='titlehead'>Register</h2>
                     <Link className='linkhome' href="/">Home / <span>Register</span></Link> 
                 </div>
             </div>
