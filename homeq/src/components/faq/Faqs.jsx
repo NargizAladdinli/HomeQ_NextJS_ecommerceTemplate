@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import Faq from "./Faq";
 import style from "./_faq.module.scss"
 
 const Faqs = () => {
