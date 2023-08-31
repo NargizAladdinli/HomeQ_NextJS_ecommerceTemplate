@@ -48,7 +48,7 @@ const Header = () => {
                       <Link href="/location">Location</Link>
                     </li>
                     <li>
-                      <Link href="#">FAQ</Link>
+                      <Link href="/faq">FAQ</Link>
                     </li>
                   </ul>
                 </li>

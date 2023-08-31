@@ -1,0 +1,31 @@
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
+
+.contact{ 
+    padding: 50px 0;
+    .container{
+        max-width: 960px;
+        margin: auto;
+        .cards{
+            text-align: center;
+            .img{
+                margin: auto;
+                @include mixin.Text($radius:50%,$ground:var.$bg-email);
+                @include mixin.Img($wid:100px,$heit:100px);
+                @include mixin.Flex($j_content:center,$a_items:center);
+                svg{
+                    @include mixin.Text($f_size:var.$size48,$colrs:var.$logoorange);
+                }
+            }
+            .title{
+                margin-top: 20px;
+                h4{ @include mixin.Text($f_size:var.$size24,$f_weight:var.$weight_4); }
+                p{ @include mixin.Text($f_size:var.$size14,$f_weight:var.$weight_4,$colrs:var.$paragraph); }
+            }
+        }
+        .send{
+            border: 1px solid;
+            
+        }
+    }
+}
