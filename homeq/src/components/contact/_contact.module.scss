@@ -1,5 +1,6 @@
 @use "../../styles/scss/partials/mixin" as mixin;
 @use "../../styles/scss/partials/varaible" as var;
+@import "../../styles/scss/partials/extend";
 
 .contact{ 
     padding: 50px 0;
@@ -24,8 +25,47 @@
             }
         }
         .send{
-            border: 1px solid;
-            
+            border: 1px solid #00000021;
+            padding: 30px;
+            h4{
+                @include mixin.Text($f_size:var.$size24,$f_weight:var.$weight_4,$l_heit:var.$line33);
+            }
+            form{
+                margin-top: 25px;
+                .inputs{
+                    display: flex;
+                    @media (max-width:768px) {
+                        display: flex;
+                        flex-direction: column;
+                        .inputtype{
+                            width: 100% !important;
+                        }
+                    }
+                    .inputtype{
+                        margin: 10px;
+                        border: 1px solid #00000021;
+                        width: 50%;
+                        padding: 13px 20px;
+                        @include mixin.Text($f_size:var.$size14,$l_heit:var.$line24,$f_weight:var.$weight_4,$radius:4px);
+                        &::placeholder{
+                            color: var.$paragraph;
+                        }
+                    }
+                    textarea{
+                        width: 100% !important;
+                        resize: none;
+                        height: 149px;
+                    }
+                }
+                .btninit{
+                    text-align: center;
+                    padding-top: 30px;
+                    button{
+                        @extend %_register;
+                        width: 282px;
+                    }
+                }
+            }
         }
     }
 }

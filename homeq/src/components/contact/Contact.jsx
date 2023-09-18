@@ -8,8 +8,8 @@ const Contact = () =>{
     return(
         <section className={style.contact}>
             <div className={style.container}>
-                <div className="row g-3">
-                    <div className="col-md-6 col-lg-4">
+                <div className="row g-3 m-0">
+                    <div className="col-sm-6 col-md-6 col-lg-4 p-0 m-0">
                         <div className={style.cards}>
                             <div className={style.img}>
                                 <FaEnvelope/>
@@ -20,7 +20,7 @@ const Contact = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 col-lg-4">
+                    <div className="col-sm-6 col-md-6 col-lg-4">
                         <div className={style.cards}>
                             <div className={style.img}>
                                 <FaPhoneAlt/>
@@ -31,7 +31,7 @@ const Contact = () =>{
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-6 col-lg-4">
+                    <div className="col-sm-6 col-md-6 col-lg-4">
                         <div className={style.cards}>
                             <div className={style.img}>
                                 <MdLocationPin/>

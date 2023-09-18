@@ -1,0 +1,24 @@
+@use "../../styles/scss/partials/mixin" as mixin;
+@use "../../styles/scss/partials/varaible" as var;
+@import "../../styles/scss/partials/extend";
+
+.service{
+    padding: 70px 0;
+    h2{ @include mixin.Text($f_size:var.$size48,$f_weight:var.$weight_4,$t_align:center); }
+    .cards{
+        padding-top: 20px;
+        .card{
+            padding: 20px;
+            @include mixin.Text($border:1px solid var.$serviceborder,$t_align:center,$radius:12px);
+            .img{
+                @include mixin.Img($wid:70px,$heit:70px);
+                @include mixin.Text($radius:var.$radius_50,$ground:var.$serviceground);
+                margin: 20px auto;
+            }
+            .content{
+                h4{ @include mixin.Text($f_size:var.$size24,$f_weight:var.$weight_4,$l_heit:var.$line44); }
+                p{ @include mixin.Text($f_size:var.$size14,$l_heit:var.$line24,$f_weight:var.$weight_4); }
+            }
+        }
+    }
+}

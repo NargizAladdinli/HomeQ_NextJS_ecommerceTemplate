@@ -1,7 +1,7 @@
-
 import Abouting from '@/components/aboiting/Abouting'
 import Faqs from '@/components/faq/Faqs'
 import SeeFurniture from '@/components/seeall/SeeAll'
+import Service from '@/components/services/Services'
 import Video from '@/components/videoss/Video'
 import Head from 'next/head'
 
@@ -18,6 +18,7 @@ export default function Home() {
         <Abouting/>
         <SeeFurniture/>
         <Video/>
+        <Service/>
         <Faqs/>
       </main>
     </>
